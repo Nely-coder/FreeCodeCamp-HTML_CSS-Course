@@ -1,0 +1,39 @@
+/* define some constants */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+@media (max-width: 468px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+.flex_center {
+  justify-content: center;
+}
+.flex_around {
+  justify-content: space-around;
+}
+.flex_between {
+  justify-content: space-between;
+}
+@media (max-width: 468px) {
+  .flex_around {
+    justify-content: center;
+  }
+  .flex_between {
+    justify-content: center;
+  }
+}
+.text_center {
+  text-align: center;
+}
+.text_right {
+  text-align: right;
+}
+
+/* define spacing */
+.padding-top-3xs {
+  padding: var(--space-3xs);
+}

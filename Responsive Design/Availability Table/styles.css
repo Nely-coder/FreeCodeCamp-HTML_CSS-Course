@@ -1,0 +1,66 @@
+:root {
+  --color1: #f0fbff;
+  --color2: #acdcee;
+  --color3: #22b2da;
+  --color4: #2e94b9;
+  --color5: #475053;
+  --solid-border: 1px solid black;
+  --dashed-border: 1px dashed black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.sharp {
+  border-bottom: var(--solid-border);
+}
+.half {
+  border-bottom: var(--dashed-border);
+}
+td,
+th {
+  border-left: 1px solid black;
+}
+.available-1 {
+  background-color: var(--color1);
+}
+.available-2 {
+  background-color: var(--color2);
+}
+.available-3 {
+  background-color: var(--color3);
+}
+.available-4 {
+  background-color: var(--color4);
+}
+.available-5 {
+  background-color: var(--color5);
+}
+#legend-gradient {
+  height: 15px;
+  width: 50px;
+  border: 2px solid black;
+  background: linear-gradient(
+    90deg,
+    var(--color1),
+    var(--color2) 10px 20px,
+    var(--color3) 20px 30px,
+    var(--color4) 30px 40px,
+    var(--color5) 40px 50px
+  );
+  margin: 0 10px;
+}
+#legend div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#legend {
+  text-align: center;
+}

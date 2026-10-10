@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+tr[class="read"] {
+  background-image: linear-gradient(to bottom, lightgreen, white);
+}
+tr[class="to-read"] {
+  background-image: linear-gradient(to bottom, lightblue, white);
+}
+tr[class="in-progress"] {
+  background-image: linear-gradient(to bottom, orange, white);
+}
+span {
+  display: inline-block;
+}
+tr[class="to-read"] span[class="status"] {
+  border: 0;
+  background-image: linear-gradient(to top, red, white);
+}
+tr[class="read"] span[class="status"] {
+  border: 0;
+  background-image: linear-gradient(to top, green, white);
+}
+tr[class="in-progress"] span[class="status"] {
+  border: 0;
+  background-image: linear-gradient(to top, brown, white);
+}
+span[class="status"],
+span[class^="rate"] {
+  height: 20px;
+  width: 100%;
+  padding: 1.5px;
+  text-align: center;
+}
+span[class^="rate"] > span {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 2px;
+  height: 5px;
+  width: 5px;
+  background-color: yellow;
+}
+span[class~="one"] *:first-of-type {
+  background-image: linear-gradient(to left, violet, black);
+}
+span[class~="two"] *:nth-child(-n + 2) {
+  background-image: linear-gradient(to left, violet, black);
+}
+span[class~="three"] span {
+  background-image: linear-gradient(to left, violet, black);
+}

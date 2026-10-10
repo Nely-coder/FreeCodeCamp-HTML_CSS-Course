@@ -1,0 +1,11 @@
+/* create the wrappers */
+.wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.wrapper_inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
