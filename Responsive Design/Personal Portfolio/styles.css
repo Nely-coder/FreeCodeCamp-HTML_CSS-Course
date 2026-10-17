@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 ::-webkit-scrollbar {
@@ -69,6 +70,8 @@ h2 {
   text-align: center;
   padding: 30px 0 10px 0;
   color: #111f35;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 2px rgba(255, 215, 0, 0.5);
 }
 
 .project-section {
@@ -113,11 +116,6 @@ h2 {
 hr {
   border: 2px solid #111f35;
 }
-/* h3 {
-  text-align: center;
-  color: #111f35;
-  padding-bottom: 10px;
-} */
 
 #contact-section {
   background-color: #ebf4f6;
@@ -144,6 +142,8 @@ hr {
   background-color: #111f35;
   color: #ebf4f6;
   border-radius: 5px;
+  padding: 5px;
+  border: 2px solid gold;
 }
 
 footer {
