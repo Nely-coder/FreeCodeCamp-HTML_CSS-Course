@@ -158,14 +158,16 @@ footer {
   align-items: center;
   color: gold;
 }
-
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   h1 {
     text-align: center;
   }
   h2 {
     font-size: 1.5rem;
   }
+}
+
+@media (max-width: 400px) {
   #navbar {
     flex-direction: column;
     align-items: flex-end;
