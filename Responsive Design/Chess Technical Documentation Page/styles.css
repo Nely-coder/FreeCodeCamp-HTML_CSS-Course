@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
 }
 nav {
   display: flex;
@@ -7,6 +10,7 @@ nav {
   justify-content: space-between;
   background-color: #606470;
   border-radius: 3px;
+  min-height: 50px;
 }
 nav > header {
   font-size: 1.5rem;
@@ -14,11 +18,19 @@ nav > header {
   border: 1px solid black;
   border-radius: 3px;
   padding: 3px;
+  min-height: 50px;
+  padding-top: 10px;
 }
 nav > a {
   color: #f7f7f7;
   padding: 5px;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
+nav > a:last-of-type {
+  margin-right: 10px;
+}
+
 .main-section header {
   display: inline-block;
   margin-top: 20px;
@@ -30,7 +42,15 @@ nav > a {
 .main-section p {
   text-indent: 15px;
 }
+
 @media (min-width: 1024px) {
+  nav > a:hover {
+    background-color: #f7f7f7;
+    color: #606470;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 1024px) {
   body {
     display: flex;
   }
@@ -39,11 +59,12 @@ nav > a {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 150px;
+    width: 170px;
     display: flex;
     flex-direction: column;
   }
-  nav header, nav a {
+  nav header,
+  nav a {
     display: block;
     margin: 10px auto;
     text-decoration: none;
@@ -52,6 +73,7 @@ nav > a {
     width: 100%;
     text-align: center;
   }
+
   nav header {
     margin: 0;
   }
@@ -60,5 +82,18 @@ nav > a {
   }
   main {
     margin-left: 170px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    width: 120px;
+  }
+  .main-section {
+    margin-left: -50px;
+  }
+  nav a {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
