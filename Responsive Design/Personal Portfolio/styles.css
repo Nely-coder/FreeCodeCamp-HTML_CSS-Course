@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -76,15 +77,14 @@ h2 {
 
 .project-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   place-items: center;
-  gap: 20px;
-  background-color: #ebf4f6;
-  padding: 20px;
+  gap: 40px;
+  padding: 50px 20px;
 }
 .project-card {
-  width: 400px;
-  height: 100%;
+  /* width: 400px;
+  height: 100%; */
   border-radius: 10px;
 }
 
@@ -119,24 +119,18 @@ hr {
 
 #contact-section {
   background-color: #ebf4f6;
-  height: 20vh;
   text-align: center;
-  padding-top: 20px;
 }
 .social-icons {
-  display: grid;
+  display: flex;
   font-size: 3rem;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
   align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  margin-top: -30px;
+  justify-content: space-evenly;
 }
 .social-icons i {
   color: #111f35;
   font-size: 2rem;
+  padding-bottom: 50px;
 }
 
 .social-icons i:hover {
@@ -149,19 +143,10 @@ hr {
 
 footer {
   background: linear-gradient(to right, #8a244b, #111f35, #254f22);
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: gold;
-}
-
-@media (max-width: 500px) {
-  .project-card {
-    width: 300px;
-  }
-  #project-section {
-    padding: 10px;
-  }
 }
