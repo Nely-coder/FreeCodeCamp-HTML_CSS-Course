@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+}
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -21,7 +24,7 @@
 }
 
 #navbar {
-  background: linear-gradient(to right, #8a244b, #111f35, #254f22);
+  background: linear-gradient(45deg, #8a244b, #111f35, #254f22);
   height: 100px;
   display: flex;
   gap: 15px;
