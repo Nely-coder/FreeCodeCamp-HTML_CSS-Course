@@ -22,7 +22,7 @@
 
 #navbar {
   background: linear-gradient(to right, #8a244b, #111f35, #254f22);
-  min-height: 100px;
+  height: 100px;
   display: flex;
   gap: 15px;
   justify-content: flex-end;
@@ -31,13 +31,16 @@
   top: 0;
   left: 0;
   right: 0;
+  box-shadow: 0 2px 2px rgba(255, 215, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 100;
 }
 nav a {
   display: flex;
   align-items: center;
   color: #f1ff5e;
   font-size: 30px;
-  min-height: 100%;
+  height: 100%;
   text-decoration: none;
   padding: 10px;
 }
@@ -85,6 +88,27 @@ h2 {
 .project-card {
   overflow: hidden;
   border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover {
+  cursor: pointer;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.project-card .img-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
 
 .project-info {
@@ -111,12 +135,22 @@ h2 {
   border-radius: 5px;
 }
 
-.project-section img {
+.project-card img {
   display: block;
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
 }
 
 hr {
@@ -169,12 +203,12 @@ footer {
 
 @media (max-width: 400px) {
   #navbar {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 2px;
+    height: auto;
+    padding: 10px;
   }
+
   nav a {
-    padding: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding: 8px;
   }
 }
